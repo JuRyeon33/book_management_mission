@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: book_management_mission
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:book_management_mission}
+    username: ${DB_USERNAME:book_management_mission}
+    password: ${DB_PASSWORD:password}
