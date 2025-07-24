@@ -9,7 +9,8 @@ import java.time.LocalDate;
 @Setter
 public class Book {
     private Long id;
-    private String name;
+    private String title;
     private Long authorId;
+    private String authorName;
     private LocalDate publishedDate;
 }
