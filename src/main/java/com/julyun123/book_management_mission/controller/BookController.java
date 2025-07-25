@@ -30,6 +30,14 @@ public class BookController {
         return "book_form";
     }
 
+    @GetMapping("/books/{id}")
+    public String detail(@PathVariable Long id, Model model) {
+        model.addAttribute("book", bookRepository.findById(id));
+        model.addAttribute("authors", authorRepository.finalAll());
+
+        return "book_detail";
+    }
+
     @PostMapping("/books")
     public String save(@ModelAttribute Book book) {
         bookRepository.save(book);
